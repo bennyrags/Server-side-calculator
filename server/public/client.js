@@ -2,6 +2,11 @@ $(document).ready(readyFunction);
 //this var is globally declared
 let calcObject = {};
 let calcOperator = "";
+let currentCalculation = {
+    num1: "",
+    operator: "",
+    num2: ""
+}
 
 function readyFunction() {
     //stretch goals
@@ -20,29 +25,42 @@ function readyFunction() {
 
     //try that 
 
-    //so 
-
-    $('.numberButton').on('click', function (event) {
+    //i think this prevetns default for all buttons? 
+    $('button').on('click', function(event){
         event.preventDefault();
-        let data_numb = $(this).attr('data-id');
-        console.log(data_numb);
-        $('#equation').append(data_numb);
-        //displayNumber();
-    });
-    $(".operator").on("click", function (event) {
-        event.preventDefault();
-        let data_operator = $(this).attr("data-id");
-        console.log(data_operator);
-        $("#equation").append(data_operator);
-        //displayNumber();
-    });
+    })
 
+    $('.numberButton').on('click', setNumbers);
+    
+  
+    $(".operator").on("click", setOperator);
 
+}//readyFunction
 
+function setNumbers() {
+    console.log('this.text', $(this).text());
+    
+if (currentCalculation.operator === ""){
+    currentCalculation.num1 += $(this).text();
+    
+}
+else {
+    currentCalculation.num2 += $(this).text();
+}
+console.log('inside getnumber, here is currentcalcualtion', currentCalculation);
 
-
+displayNumbers();
 }
 
+function setOperator() {
+currentCalculation.operator = $(this).text();
+    displayNumbers();
+}
+
+function displayNumbers()
+ {
+    $('#calculation_area').text(`${currentCalculation.num1} ${currentCalculation.operator} ${currentCalculation.num2}`);
+ }
 
 
 
