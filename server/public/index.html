@@ -1,0 +1,55 @@
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Server-Side Calculator</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="client.js"></script>
+  </head>
+  <body>
+    <h1>Server Side Calculator</h1>
+    <form>
+<!-- So what I have here are a bunch of buttons with numbers, operators, and actions applied to them
+    I need to add these numbers to the input as i enter them via click. 
+    ditto with the decimal. 
+    ditto with operator.
+    -need to prevent typing directly into the input, right? 
+    -need to make sure the operator always comes after the last entered number
+    -prevent decimal from being entered except after a number. 
+    -equal runs the equation  -->
+
+      <div class="equation" id="equation"></div>
+      <button id="clear" class="clear">C</button>
+      <button class="numberButton" data-id="1" id="one">1</button>
+      <button class="numberButton" data-id="2" id="two">2</button>
+      <button class="numberButton" data-id="3" id="three">3</button>
+      <button class="numberButton" data-id="4" id="four">4</button>
+      <button class="numberButton" data-id="5" id="five">5</button>
+      <button class="numberButton" data-id="6" id="six">6</button>
+      <button class="numberButton" data-id="7" id="seven">7</button>
+      <button class="numberButton" data-id="8" id="eight">8</button>
+      <button class="numberButton" data-id="9" id="nine">9</button>
+      <button class="numberButton" data-id="0" id="zero">0</button>
+
+      <button class="numberButton" data-id="." id="decimal">.</button>
+      <button class="operator" data-id="+" id="plus">+</button>
+      <button class="operator" data-id="-" id="minus">-</button>
+      <button class="operator" data-id="*" id="multiply">*</button>
+      <button class="operator" data-id="/" id="divide">/</button>
+      <button class="equals" data-id="=" id="equals">=</button>
+
+    </form>
+    <section class="calcuations">
+      <!-- calculations will go here first -->
+      <h2 id="calculationResult"></h2>
+
+      <!-- history of calcuations will go here -->
+      <ul id="pastCalculationList"></ul>
+    </section>
+  </body>
+</html>
