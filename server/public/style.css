@@ -1,3 +1,40 @@
-.equation {
-    border: 1px solid grey;
+body {
+    background: linear-gradient(45deg, tomato, purple);
+}
+
+main {
+    width:30vw;
+    margin:auto;
+    background: white;
+    border-radius: 1em;
+    padding: 1em;
+    box-shadow: 0px 0px 10px solid white;
+}
+
+.calculation_area {
+    height:25px;
+    margin-bottom:10px;    
+    
+}
+
+.calc_row button {
+    width: 24.27%;
+    height: 30px;
+    margin-bottom: 10px;
+    background: white;
+    border-color:initial;
+}
+
+.calculation_area, .calc_row button {
+        border: 1px solid tomato;
+            border-radius: 5px;
+
+
+}
+
+
+
+
+.calc_row button.clear {
+    width:100%;
 }
