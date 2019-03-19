@@ -4,6 +4,9 @@ body, h1,h2,h3,h4,h5,h6,p,li,a {
 
 body {
     background: linear-gradient(45deg, tomato, purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 main {
@@ -17,16 +20,26 @@ main {
 
 .calculation_area {
     height:25px;
-    margin-bottom:10px;    
-    
+        width: 89%;
+    margin: 10px auto;
+    text-align: right;
+    padding:15px 5px 10px;   
 }
-
+.calc_row {
+    text-align: center;
+}
 .calc_row button {
-    width: 24.18%;
+    width: 22%;
     height: 30px;
     margin-bottom: 10px;
     background: white;
     border-color:initial;
+}
+
+@media (max-width:900px) {
+    .calc_row button {
+        width: 48%;
+    }
 }
 
 .calculation_area, .calc_row button {
@@ -38,7 +51,7 @@ main {
 
 
 
-
 .calc_row button.clear {
-    width:100%;
+    width:93%;
+    margin: auto;
 }
